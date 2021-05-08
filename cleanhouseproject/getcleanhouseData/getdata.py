@@ -6,7 +6,7 @@ url = "http://openapi.jejusi.go.kr/rest/cleanhouseinfoservice/getCleanHouseInfoL
 
 content = requests.get(url).content
 dict = xmltodict.parse(content)
-jsonString = json.dumps(dict["rfcOpenApi"]["body"], ensure_ascii=False)
+jsonString = json.dumps(dict["rfcOpenApi"]["body"])
 jsonObj = json.loads(jsonString)
 
 
