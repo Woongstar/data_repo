@@ -15,4 +15,4 @@ df.drop(columns=["mapx","mapy","dong"], inplace=True)
 print(df)
 # print(df.columns)
 
-df.to_json("./cleanhousejejuchange.json",orient="columns")
+df.to_json("./cleanhousejejuchange.json",orient="records")
