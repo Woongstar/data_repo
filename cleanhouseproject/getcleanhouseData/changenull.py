@@ -8,4 +8,5 @@ df.fillna({'location':df["address"]},inplace=True)
 
 print(df["location"].isnull().sum(axis=0))
 # print(df["location"].isnull)
+df.to_json("./jejucleanhousedata.json",orient='records')
 df.info()
