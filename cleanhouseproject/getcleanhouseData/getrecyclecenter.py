@@ -30,6 +30,7 @@ recycledata["location"] = recycledata["명칭"]
 recycledata["address"] = recycledata["도로명주소"]
 recycledata.drop(columns=["명칭","도로명주소"], inplace=True)
 print(recycledata)
+recycledata.to_json("./recycledata.json",orient='records')
 # print(type(recycledata))
 # col_name = ['colname1', 'colname2',"colname3","colname4"]
 # df = pd.DataFrame(recycle_list[0], columns=col_name)
