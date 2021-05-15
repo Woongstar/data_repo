@@ -33,5 +33,3 @@ print(recycledata)
 # print(type(recycledata))
 # col_name = ['colname1', 'colname2',"colname3","colname4"]
 # df = pd.DataFrame(recycle_list[0], columns=col_name)
-
-

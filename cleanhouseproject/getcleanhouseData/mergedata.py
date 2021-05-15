@@ -8,5 +8,5 @@ jejuall = pd.concat([jejusi, sequipo], ignore_index=True)
 jejujson = jejuall.to_json(orient='records')
 jejuall.to_json("./jejucleanhousedata.json",orient='records')
 
-print(jejujson)
+# print(jejujson)
 # print(jejuall)
