@@ -27,21 +27,21 @@ app = Nominatim(user_agent='tutorial')
 df = pd.read_json("./recycledata.json")
 
 # print(df.columns)
-# df["location"] = df["('location', '')"]
-# df["address"] = df["('address', '')"]
-# df.drop(columns=["('location', '')","('address', '')"], inplace=True)
-# df.to_json("./recycledata.json", orient="records")
+df["location"] = df["('location', '')"]
+df["address"] = df["('address', '')"]
+df.drop(columns=["('location', '')","('address', '')"], inplace=True)
+df.to_json("./recycledata.json", orient="records")
 # df["latitude"] = app.geocode(df["address"][1][0])
 # df["longtitude"] = geocodinglong(df["address"])
 # lat = app.geocode(df["address"])
-print(df)
+# print(df)
 # print(df.dtypes)
 
-
-for items in df["address"]:
-    try:
-        lat = app.geocode(items)
-        print("latitude : {}".format(lat[1][0]))
-        print("longtitude : {}".format(lat[1][1]))
-    except:
-        print("에러")
+#
+# for items in df["address"]:
+#     try:
+#         lat = app.geocode(items)
+#         print("latitude : {}".format(lat[1][0]))
+#         print("longtitude : {}".format(lat[1][1]))
+#     except:
+#         print("에러")
